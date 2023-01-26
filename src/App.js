@@ -9,10 +9,9 @@ import { useGameContext } from './context/GameContext.js';
 function App() {
   const [deck, setDeck] = useState(initialCards);
   const [playerOneHand, setPlayerOneHand] = useState([]);
-  const { selectedCard, setSelectedCard } = useGameContext();
+  const { selectedCard, setSelectedCard, from } = useGameContext();
   const [playerTwoHand, setPlayerTwoHand] = useState([]);
   const [playerThreeHand, setPlayerThreeHand] = useState([]);
-  const { from } = useGameContext();
   const [to, setTo] = useState(1);
 
   function findCardIndex(value, suit, cards) {
